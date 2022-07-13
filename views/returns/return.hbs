@@ -1,6 +1,6 @@
 <div class="" style="margin-top: 12rem;">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
-    Retirer un livre
+    Ajouter un livre Retourner
   </button>
 </div>
 
@@ -12,20 +12,18 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Title</th>
-      <th scope="col">Date Retrait</th>
-      <th scope="col">Date Retourner</th>
       <th scope="col">Visiteur</th>
+      <th scope="col">Title</th>
+      <th scope="col">Date de Retour</th>
       <th scope="col" class="text-end">Action</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
+      <td>Mark</td>
       <td>Le champion</td>
-      <td>12/3/2022</td>
-      <td>12/5/2022</td>
-      <td>Otto</td>
+      <td>12/6/2022</td>
       <td class="text-end">
         <a href="#" type="buttton" class="btn btn-light btn-small"> <i class="bi bi-eye"></i>View</a>
         <button type="button" data-bs-toggle="modal" data-bs-target="#editModal"> <i
@@ -37,10 +35,9 @@
 
     <tr>
       <th scope="row">2</th>
-      <td>Le Camara laye</td>
-      <td>12/3/2022</td>
-      <td>12/5/2022</td>
-      <td>Otto</td>
+      <td>Mark</td>
+      <td>Le Kembo</td>
+      <td>12/7/2022</td>
       <td class="text-end">
         <a href="#" type="buttton" class="btn btn-light btn-small"> <i class="bi bi-eye"></i>View</a>
         <button type="button" data-bs-toggle="modal" data-bs-target="#editModal"> <i
@@ -52,10 +49,9 @@
 
     <tr>
       <th scope="row">3</th>
-      <td>Le Kembog</td>
-      <td>12/5/2022</td>
-      <td>17/5/2022</td>
-      <td>Tritia</td>
+      <td>Mark</td>
+      <td>La Muraille</td>
+      <td>12/6/2022</td>
       <td class="text-end">
         <a href="#" type="buttton" class="btn btn-light btn-small"> <i class="bi bi-eye"></i>View</a>
         <button type="button" data-bs-toggle="modal" data-bs-target="#editModal"> <i
@@ -67,10 +63,9 @@
     </tr>
     <tr>
       <th scope="row">4</th>
-      <td>La mission</td>
-      <td>12/4/2022</td>
-      <td>12/6/2022</td>
-      <td>Pytget</td>
+      <td>Mark</td>
+      <td>Le Monsieur</td>
+      <td>14/5/2022</td>
       <td class="text-end">
         <a href="#" type="buttton" class="btn btn-light btn-small"> <i class="bi bi-eye"></i>View</a>
         <button type="button" data-bs-toggle="modal" data-bs-target="#editModal"> <i
@@ -86,36 +81,34 @@
   </tbody>
 </table>
 
-{{!-- Add withdraw modal --}}
+{{!-- Add book  returned modal --}}
 <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="addModalLabel">Retrait</h5>
+        <h5 class="modal-title" id="addModalLabel">Ajouter le livre retourner</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <div class="mb-3">
+          <label for="idbook" class="form-label">Id</label>
+          <input type="text" class="form-control" id="idbook" placeholder="Id livre" name="idbook">
+        </div>
+
+        <div class="mb-3">
+          <label for="nom" class="form-label">Nom</label>
+          <input type="text" class="form-control" id="nom" placeholder="Nom" name="nom">
+        </div>
         <div class="mb-3">
           <label for="title" class="form-label">Title</label>
           <input type="text" class="form-control" id="title" placeholder="Title livre" name="title">
         </div>
 
-        <div class="mb-3">
-          <label for="withdrawdate" class="form-label">Date Retrait</label>
-          <div class="input-group date" id="datepickeradd">
-            <input type="text" class="form-control" id="datepickerWithdrawdate" placeholder="Date Retrait" name="datepickerWithdrawdate">
-            <span class="input-group-append">
-              <span class="input-group-text bg-white d-block">
-                <i class="fa fa-calendar"></i>
-              </span>
-            </span>
-          </div>
-        </div>
 
         <div class="mb-3">
-          <label for="date" class="form-label">Date Retourner</label>
-          <div class="input-group date" id="datepickeraddw">
-            <input type="text" class="form-control" placeholder="Date Retourner" id="datepickerReturn">
+          <label for="date" class="form-label">Date Retour</label>
+          <div class="input-group date" id="datepickeradd">
+            <input type="text" class="form-control">
             <span class="input-group-append">
               <span class="input-group-text bg-white d-block">
                 <i class="fa fa-calendar"></i>
@@ -133,36 +126,34 @@
 </div>
 
 
-<!-- Edit book modal -->
+<!-- Edit book returned modal -->
 <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="editModalLabel">Editer le Retrait</h5>
+        <h5 class="modal-title" id="editModalLabel">Editer le livre retourner</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <div class="mb-3">
+          <label for="idbook" class="form-label">Id</label>
+          <input type="text" class="form-control" id="idbook" placeholder="Id livre" name="idbook">
+        </div>
+
+        <div class="mb-3">
+          <label for="nom" class="form-label">Nom</label>
+          <input type="text" class="form-control" id="nom" placeholder="Nom" name="nom">
+        </div>
         <div class="mb-3">
           <label for="title" class="form-label">Title</label>
           <input type="text" class="form-control" id="title" placeholder="Title livre" name="title">
         </div>
 
-        <div class="mb-3">
-          <label for="withdrawdate" class="form-label">Date Retrait</label>
-          <div class="input-group date" id="datepickeradded">
-            <input type="text" class="form-control" id="datepickerWithdrawdate" placeholder="Date Retrait" name="datepickerWithdrawdate">
-            <span class="input-group-append">
-              <span class="input-group-text bg-white d-block">
-                <i class="fa fa-calendar"></i>
-              </span>
-            </span>
-          </div>
-        </div>
 
         <div class="mb-3">
-          <label for="date" class="form-label">Date Retourner</label>
-          <div class="input-group date" id="datepickeraddwed">
-            <input type="text" class="form-control" placeholder="Date Retourner" id="datepickerReturn">
+          <label for="date" class="form-label">Date Retour</label>
+          <div class="input-group date" id="datepickeradd">
+            <input type="text" class="form-control">
             <span class="input-group-append">
               <span class="input-group-text bg-white d-block">
                 <i class="fa fa-calendar"></i>
@@ -173,7 +164,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-        <button type="button" class="btn btn-primary">Enregistrer</button>
+        <button type="button" class="btn btn-primary">Mettre a jour</button>
       </div>
     </div>
   </div>
@@ -184,12 +175,12 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="deleteModalLabel">Edit book</h5>
+        <h5 class="modal-title" id="deleteModalLabel">Supprimer le livre<h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <div class="mb-3">
-          <label for="idbook" class="form-label">Tu veux vraiment supprimer le retrait</label>
+          <label for="idbook" class="form-label">Tu veux vraiment supprimer</label>
         </div>
         <div>
       </div>

@@ -1,6 +1,6 @@
 <div class="" style="margin-top: 12rem;">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
-        Ajouter un Visiteur
+        Ajouter une Categorie
     </button>
 </div>
 
@@ -14,9 +14,7 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Nom</th>
-            <th scope="col">Prenom</th>
-            <th scope="col">Age</th>
-            <th scope="col">Classe</th>
+
             <th scope="col" class="text-end">Action</th>
         </tr>
     </thead>
@@ -24,9 +22,6 @@
         <tr>
             <th scope="row">1</th>
             <td>Mark</td>
-            <td>Otto</td>
-            <td>15</td>
-            <td>Bac II </td>
             <td class="text-end">
                 <a href="#" type="buttton" class="btn btn-light btn-small"> <i class="bi bi-eye"></i>View</a>
                 <button type="button" data-bs-toggle="modal" data-bs-target="#editModal"> <i
@@ -39,9 +34,6 @@
         <tr>
             <th scope="row">1</th>
             <td>Mark</td>
-            <td>Otto</td>
-            <td>56</td>
-            <td>Bac II </td>
             <td class="text-end">
                 <a href="#" type="buttton" class="btn btn-light btn-small"> <i class="bi bi-eye"></i>View</a>
                 <button type="button" data-bs-toggle="modal" data-bs-target="#editModal"> <i
@@ -54,9 +46,6 @@
         <tr>
             <th scope="row">1</th>
             <td>Mark</td>
-            <td>Otto</td>
-            <td>67</td>
-            <td>Bac II </td>
             <td class="text-end">
                 <a href="#" type="buttton" class="btn btn-light btn-small"> <i class="bi bi-eye"></i>View</a>
                 <button type="button" data-bs-toggle="modal" data-bs-target="#editModal"> <i
@@ -69,9 +58,6 @@
         <tr>
             <th scope="row">1</th>
             <td>Mark</td>
-            <td>Otto</td>
-            <td>84</td>
-            <td>Bac II </td>
             <td class="text-end">
                 <a href="#" type="buttton" class="btn btn-light btn-small"> <i class="bi bi-eye"></i>View</a>
                 <button type="button" data-bs-toggle="modal" data-bs-target="#editModal"> <i
@@ -87,33 +73,23 @@
     </tbody>
 </table>
 
-{{!-- Add visitor to themodal --}}
+{{!-- Add caegorie to themodal --}}
 <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="addModalLabel">Ajouter Visiteur</h5>
+                <h5 class="modal-title" id="addModalLabel">Ajouter Categorie</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="mb-3">
                     <label for="id" class="form-label">Id</label>
-                    <input type="text" class="form-control" id="id" placeholder="Id Visiteur" name="idvisitor">
+                    <input type="text" class="form-control" id="id" placeholder="Id Categorie" name="idCategorie">
                 </div>
 
                 <div class="mb-3">
                     <label for="nom" class="form-label">Nom</label>
-                    <input type="text" class="form-control" id="nom" placeholder="Nom Visiteur" name="nom">
-                </div>
-
-                <div class="mb-3">
-                    <label for="author" class="form-label">Age</label>
-                    <input type="text" class="form-control" id="author" placeholder="Age" name="age">
-                </div>
-
-                <div class="mb-3">
-                    <label for="classe" class="form-label">Classe</label>
-                    <input type="text" class="form-control" id="classe" placeholder="Classe" name="classe">
+                    <input type="text" class="form-control" id="nom" placeholder="Nom Categorie" name="nom">
                 </div>
             </div>
             <div class="modal-footer">
@@ -124,33 +100,23 @@
     </div>
 </div>
 
-<!-- Edit visitor modal -->
+<!-- Edit category modal -->
 <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="editModalLabel">Editer Visiteur</h5>
+                <h5 class="modal-title" id="editModalLabel">Editer Categorie</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="mb-3">
                     <label for="id" class="form-label">Id</label>
-                    <input type="text" class="form-control" id="id" placeholder="Id Visiteur" name="idvisitor">
+                    <input type="text" class="form-control" id="id" placeholder="Id Categorie" name="idCategorie" value="">
                 </div>
 
                 <div class="mb-3">
                     <label for="nom" class="form-label">Nom</label>
-                    <input type="text" class="form-control" id="nom" placeholder="Nom Visiteur" name="nom">
-                </div>
-
-                <div class="mb-3">
-                    <label for="author" class="form-label">Age</label>
-                    <input type="text" class="form-control" id="author" placeholder="Age" name="age">
-                </div>
-
-                <div class="mb-3">
-                    <label for="classe" class="form-label">Classe</label>
-                    <input type="text" class="form-control" id="classe" placeholder="Classe" name="classe">
+                    <input type="text" class="form-control" id="nom" placeholder="Nom Categorie" name="nom">
                 </div>
             </div>
             <div class="modal-footer">
@@ -161,12 +127,12 @@
     </div>
 </div>
 
-<!-- Delete Visitors modal -->
+<!-- Delete Categorie modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="editModalLabel">Supprimer Visiteur</h5>
+                <h5 class="modal-title" id="editModalLabel">Supprimer Categorie</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
