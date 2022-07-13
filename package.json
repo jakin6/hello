@@ -1,11 +1,10 @@
 {
   "name": "bibliotheque",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon app.js"
+    "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
@@ -18,5 +17,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakin6/hello.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jakin6/hello/issues"
+  },
+  "homepage": "https://github.com/jakin6/hello#readme",
+  "description": ""
 }
