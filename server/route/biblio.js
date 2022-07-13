@@ -7,4 +7,5 @@ const bookController = require('../controller/book')
 router.get('/book',bookController.view)
 router.get('/editbook',bookController.edit)
 router.get('/addbook',bookController.addBook)
+router.get('/deletebook',bookController.addBook)
 module.exports=router

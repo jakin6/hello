@@ -12,4 +12,9 @@ exports.edit = ((req,res)=>{
 res.render('book/edit-book')
 })
 
+//edit book
+exports.delete = ((req,res)=>{
+        res.render('book/delete-book')
+})
+
 
